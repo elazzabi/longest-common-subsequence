@@ -28,4 +28,4 @@ $ npm test
 
 ## License
 
-MIT © [EL AZZABI Ahmed](https://elazzabi.com)
+MIT © [EL AZZABI Ahmed](http://elazzabi.com)
