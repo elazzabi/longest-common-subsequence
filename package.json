@@ -1,0 +1,30 @@
+{
+  "name": "longest-common-subequence",
+  "version": "0.1.0",
+  "description": "Get the longest common subsequence of two strings as described in https://en.wikipedia.org/wiki/Longest_common_subsequence_problem",
+  "license": "MIT",
+  "repository": "github.com/elazzabi/longest-common-subequence",
+  "author": {
+    "name": "EL AZZABI ahmed",
+    "email": "elazzabi.ahmed@gmail.com",
+    "url": "elazzabi.com"
+  },
+  "engines": {
+    "node": ">=4"
+  },
+  "scripts": {
+    "test": "xo && ava"
+  },
+  "files": [
+    "index.js"
+  ],
+  "keywords": [
+    "string",
+    "comparison",
+    "string"
+  ],
+  "devDependencies": {
+    "ava": "*",
+    "xo": "^0.14.0"
+  }
+}
