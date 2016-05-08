@@ -1,4 +1,4 @@
-# longest-common-subsequence [![Build Status](https://travis-ci.org/elazzabi/longest-common-subsequence.svg?branch=master)](https://travis-ci.org/sindresorhus/longest-common-subsequence)
+﻿# longest-common-subsequence [![Build Status](https://travis-ci.org/elazzabi/longest-common-subsequence.svg?branch=master)](https://travis-ci.org/elazzabi/longest-common-subsequence)
 
 > Get the longest common subsequence of two strings as described in [Wikipedia](https://en.wikipedia.org/wiki/Longest_common_subsequence_problem)
 
