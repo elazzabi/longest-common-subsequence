@@ -1,16 +1,16 @@
 'use strict';
 
-module.exports = function (firstSequence, secondSequence, caseSensitive) {
-	function createArray(dimension) {
-		let array = [];
+function createArray(dimension) {
+	let array = [];
 
-		for (let i = 0; i < dimension; i++) {
-			array[i] = [];
-		}
-
-		return array;
+	for (let i = 0; i < dimension; i++) {
+		array[i] = [];
 	}
 
+	return array;
+}
+
+module.exports = function (firstSequence, secondSequence, caseSensitive) {
 	let firstString = caseSensitive ? firstSequence : firstSequence.toLowerCase();
 	let secondString = caseSensitive ? secondSequence : secondSequence.toLowerCase();
 
