@@ -1,9 +1,9 @@
 'use strict';
 
 function createArray(dimension) {
-	let array = [];
+	var array = [];
 
-	for (let i = 0; i < dimension; i++) {
+	for (var i = 0; i < dimension; i++) {
 		array[i] = [];
 	}
 
@@ -11,8 +11,8 @@ function createArray(dimension) {
 }
 
 module.exports = function (firstSequence, secondSequence, caseSensitive) {
-	let firstString = caseSensitive ? firstSequence : firstSequence.toLowerCase();
-	let secondString = caseSensitive ? secondSequence : secondSequence.toLowerCase();
+	var firstString = caseSensitive ? firstSequence : firstSequence.toLowerCase();
+	var secondString = caseSensitive ? secondSequence : secondSequence.toLowerCase();
 
 	if (firstString === secondString) {
 		return firstString;
@@ -22,20 +22,22 @@ module.exports = function (firstSequence, secondSequence, caseSensitive) {
 		return '';
 	}
 
-	let firstStringLength = firstString.length;
-	let secondStringLength = secondString.length;
-	let lcsMatrix = createArray(secondStringLength + 1);
+	var firstStringLength = firstString.length;
+	var secondStringLength = secondString.length;
+	var lcsMatrix = createArray(secondStringLength + 1);
 
-	for (let i = 0; i <= firstStringLength; i++) {
+	var i;
+	var j;
+	for (i = 0; i <= firstStringLength; i++) {
 		lcsMatrix[0][i] = 0;
 	}
 
-	for (let i = 0; i <= secondStringLength; i++) {
+	for (i = 0; i <= secondStringLength; i++) {
 		lcsMatrix[i][0] = 0;
 	}
 
-	for (let i = 1; i <= secondStringLength; i++) {
-		for (let j = 1; j <= firstStringLength; j++) {
+	for (i = 1; i <= secondStringLength; i++) {
+		for (j = 1; j <= firstStringLength; j++) {
 			if (firstString[i - 1] === secondString[j - 1]) {
 				lcsMatrix[i][j] = lcsMatrix[i - 1][j - 1] + 1;
 			} else {
@@ -44,9 +46,9 @@ module.exports = function (firstSequence, secondSequence, caseSensitive) {
 		}
 	}
 
-	let lcs = "";
-	let i = secondStringLength;
-	let j = firstStringLength;
+	var lcs = "";
+	i = secondStringLength;
+	j = firstStringLength;
 
 	while (i > 0 && j > 0) {
 		if (firstString[i - 1] === secondString[j - 1]) {
