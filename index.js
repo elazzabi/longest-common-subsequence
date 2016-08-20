@@ -38,7 +38,7 @@ module.exports = function (firstSequence, secondSequence, caseSensitive) {
 
 	for (i = 1; i <= secondStringLength; i++) {
 		for (j = 1; j <= firstStringLength; j++) {
-			if (firstString[i - 1] === secondString[j - 1]) {
+			if (firstString[j - 1] === secondString[i - 1]) {
 				lcsMatrix[i][j] = lcsMatrix[i - 1][j - 1] + 1;
 			} else {
 				lcsMatrix[i][j] = Math.max(lcsMatrix[i - 1][j], lcsMatrix[i][j - 1]);
@@ -51,8 +51,8 @@ module.exports = function (firstSequence, secondSequence, caseSensitive) {
 	j = firstStringLength;
 
 	while (i > 0 && j > 0) {
-		if (firstString[i - 1] === secondString[j - 1]) {
-			lcs = firstString[i - 1] + lcs;
+		if (firstString[j - 1] === secondString[i - 1]) {
+			lcs = firstString[j - 1] + lcs;
 			i--;
 			j--;
 		} else if (Math.max(lcsMatrix[i - 1][j], lcsMatrix[i][j - 1]) === lcsMatrix[i - 1][j]) {

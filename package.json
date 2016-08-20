@@ -1,6 +1,6 @@
 {
   "name": "longest-common-subsequence",
-  "version": "1.0.3",
+  "version": "1.0.4",
   "description": "Get the longest common subsequence of two strings as described in https://en.wikipedia.org/wiki/Longest_common_subsequence_problem",
   "license": "MIT",
   "repository": "github.com/elazzabi/longest-common-subequence",

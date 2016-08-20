@@ -8,4 +8,5 @@ test('Testing functionality', t => {
 	t.is(lcs('abc def', 'abc'), 'abc', 'Testing algorithm - 1');
 	t.is(lcs('abc def', 'arc reg'), 'ac e', 'Testing algorithm - 2');
 	t.is(lcs('abc def ghi', 'abc jkl ghi'), 'abc  ghi', 'Testing algorithm - 3');
+	t.is(lcs('gar', 'goran Drs'), 'gar');
 });
